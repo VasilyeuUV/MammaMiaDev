@@ -1,0 +1,99 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MammaMiaDev.Views.ImagePageView"
+             
+             xmlns:vm="using:MammaMiaDev.ViewModels"
+             x:DataType="vm:ImagePageViewModel"
+             
+             xmlns:conv="clr-namespace:MammaMiaDev.Converters"
+             >
+
+  <Design.DataContext>
+    <vm:ImagePageViewModel/>
+  </Design.DataContext>
+
+  <UserControl.Resources>
+    <conv:BitmapAssetValueConverter x:Key="BitmapConverter"/>
+  </UserControl.Resources>
+
+  <ScrollViewer>
+    <StackPanel HorizontalAlignment="Left"
+                Margin="20">
+
+      <TextBlock Text="Images"
+                 Margin="0 20"
+                 FontSize="20"
+                 FontWeight="Bold"/>
+
+      <!-- Декларативный подход -->
+      <TextBlock Text="Декларативный подход"
+           Margin="0 20"
+           FontSize="15"
+           FontWeight="Bold"/>
+      <Border CornerRadius="10"
+              ClipToBounds="True"
+              Width="300"
+              BorderBrush="Gray"
+              BorderThickness="2"
+              Background="Gray">
+        <Image Source="/Assets/Images/img1.png"
+               MaxWidth="300"/>
+      </Border>
+
+      <!-- Конвертер привязки (Binding converter) -->
+      <TextBlock Text="Конвертер привязки (Binding converter)"
+                 Margin="0 20"
+                 FontSize="15"
+                 FontWeight="Bold"/>
+      <Border CornerRadius="10"
+              ClipToBounds="True"
+              Width="300"
+              BorderBrush="Gray"
+              BorderThickness="2"
+              Background="Gray">
+        <!--<Image Source="{Binding ImageSourceString, Converter={StaticResource BitmapConverter}}"
+               MaxWidth="300"
+               HorizontalAlignment="Left"/>-->
+      </Border>
+
+      <!-- Картинка из ресурсов -->
+      <TextBlock Text="Картинка из ресурсов"
+                 Margin="0 20"
+                 FontSize="15"
+                 FontWeight="Bold"/>
+      <Border CornerRadius="10"
+              ClipToBounds="True"
+              Width="300"
+              BorderBrush="Gray"
+              BorderThickness="2"
+              Background="Gray">
+        <Image Source="{Binding ImageSourceBitmapLocal}"
+               MaxWidth="300"
+               HorizontalAlignment="Left"/>
+      </Border>
+
+      <!-- Картинка из Интернета -->
+      <TextBlock Text="Картинка из Интернета"
+                 Margin="0 20"
+                 FontSize="15"
+                 FontWeight="Bold"/>
+      <Border CornerRadius="10"
+              ClipToBounds="True"
+              Width="300"
+              BorderBrush="Gray"
+              BorderThickness="2"
+              Background="Gray">
+        <Image Source="{Binding ImageSourceBitmapWeb^}"
+               MaxWidth="300"
+               HorizontalAlignment="Left"/>
+        <!-- !!! Символ ^ добавляется в случае асинхронных операций. !!! -->
+      </Border>
+
+
+    </StackPanel>
+  </ScrollViewer>
+
+</UserControl>

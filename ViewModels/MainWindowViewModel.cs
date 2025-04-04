@@ -17,7 +17,8 @@ public partial class MainWindowViewModel : ViewModelBase
     public ObservableCollection<ListItemTemplate> Items { get; } 
         = [
             new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular"),
-            new ListItemTemplate(typeof(ButtonPageViewModel), "CursorHoverRegular")
+            new ListItemTemplate(typeof(ButtonPageViewModel), "CursorHoverRegular"),
+            new ListItemTemplate(typeof(ImagePageViewModel), "ImageRegular")
           ];
 
 
