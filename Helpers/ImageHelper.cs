@@ -9,7 +9,7 @@ using Avalonia.Platform;
 
 namespace MammaMiaDev.Helpers;
 
-public static class ImageHelper
+internal static class ImageHelper
 {
     public static Bitmap LoadFromResource(string resourcePath)
     {

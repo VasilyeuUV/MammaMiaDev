@@ -5,6 +5,9 @@ using Avalonia.Media;
 
 namespace MammaMiaDev.Templates;
 
+/// <summary>
+/// Модель пункта меню для навигации по Страницам.
+/// </summary>
 public class ListItemTemplate
 {
     public ListItemTemplate(Type type, string iconKey)
