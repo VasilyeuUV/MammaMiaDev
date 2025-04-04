@@ -1,8 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace MammaMiaDev.ViewModels
+namespace MammaMiaDev.ViewModels;
+
+public class ViewModelBase : ObservableObject
 {
-    public class ViewModelBase : ObservableObject
-    {
-    }
 }
