@@ -18,7 +18,8 @@ public partial class MainWindowViewModel : ViewModelBase
             new ListItemTemplate(typeof(HomePageViewModel), "HomeRegular"),
             new ListItemTemplate(typeof(ButtonPageViewModel), "CursorHoverRegular"),
             new ListItemTemplate(typeof(GridPageViewModel), "GridRegular"),
-            new ListItemTemplate(typeof(ImagePageViewModel), "ImageRegular")
+            new ListItemTemplate(typeof(ImagePageViewModel), "ImageRegular"),
+            new ListItemTemplate(typeof(DragAndDropPageViewModel), "DragRegular")
           ];
 
 

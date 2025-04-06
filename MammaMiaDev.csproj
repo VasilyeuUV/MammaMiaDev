@@ -28,6 +28,8 @@
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="FluentAvaloniaUI" Version="2.3.0" />
+  
+  <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="$(AvaloniaVersion)" />
   </ItemGroup>
 
   <ItemGroup>

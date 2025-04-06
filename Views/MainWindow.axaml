@@ -30,7 +30,7 @@
     
     <SplitView Grid.Row="1"
                IsPaneOpen="{Binding IsPaneOpen}"
-               OpenPaneLength="120"
+               OpenPaneLength="160"
                CompactPaneLength="46"
                DisplayMode="CompactInline"
                Background="#1e1e1e"
