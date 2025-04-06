@@ -15,6 +15,6 @@
   <Application.Styles>
     <sty:FluentAvaloniaTheme PreferUserAccentColor="True"/>
     <StyleInclude Source="avares://MammaMiaDev/Assets/Icons.axaml"/>
-    <!--<StyleInclude Source="avares://MammaMiaDev/Templates/ContentExample.axaml"/>-->
+    <StyleInclude Source="avares://MammaMiaDev/Templates/ContentExample.axaml"/>
   </Application.Styles>
 </Application>

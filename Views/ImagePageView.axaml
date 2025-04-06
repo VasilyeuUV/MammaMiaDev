@@ -29,19 +29,19 @@
                  FontWeight="Bold"/>
 
       <!-- Декларативный подход -->
-      <TextBlock Text="Декларативный подход"
-           Margin="0 20"
-           FontSize="15"
-           FontWeight="Bold"/>
-      <Border CornerRadius="10"
-              ClipToBounds="True"
-              Width="300"
-              BorderBrush="Gray"
-              BorderThickness="2"
-              Background="Gray">
-        <Image Source="/Assets/Images/img1.png"
-               MaxWidth="300"/>
-      </Border>
+        <TextBlock Text="Декларативный подход"
+                   Margin="0 20"
+                   FontSize="15"
+                   FontWeight="Bold"/>
+        <Border CornerRadius="10"
+                ClipToBounds="True"
+                Width="300"
+                BorderBrush="Gray"
+                BorderThickness="2"
+                Background="Gray">
+          <Image Source="/Assets/Images/img1.png"
+                 MaxWidth="300"/>
+        </Border>
 
       <!-- Конвертер привязки (Binding converter) -->
       <TextBlock Text="Конвертер привязки (Binding converter)"
@@ -54,9 +54,9 @@
               BorderBrush="Gray"
               BorderThickness="2"
               Background="Gray">
-        <!--<Image Source="{Binding ImageSourceString, Converter={StaticResource BitmapConverter}}"
+        <Image Source="{Binding ImageSourceString, Converter={StaticResource BitmapConverter}}"
                MaxWidth="300"
-               HorizontalAlignment="Left"/>-->
+               HorizontalAlignment="Left"/>
       </Border>
 
       <!-- Картинка из ресурсов -->
