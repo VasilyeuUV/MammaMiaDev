@@ -9,7 +9,6 @@ namespace MammaMiaDev.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    [ObservableProperty] private string _greeting = "Welcome to Avalonia!";
     [ObservableProperty] private bool _isPaneOpen = true;
     [ObservableProperty] private ViewModelBase? _currentPage = new HomePageViewModel();
     [ObservableProperty] private ListItemTemplate? _selectedListItem;
