@@ -1,4 +1,5 @@
 using FluentAvalonia.UI.Windowing;
+using MammaMiaDev.Models;
 
 namespace MammaMiaDev.Views
 {
@@ -10,6 +11,8 @@ namespace MammaMiaDev.Views
 
             TitleBar.ExtendsContentIntoTitleBar = true;
             TitleBar.TitleBarHitTestType = TitleBarHitTestType.Complex;
+
+            SplashScreen = new ComplexSplashScreen();
         }
     }
 }

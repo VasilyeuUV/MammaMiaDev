@@ -5,8 +5,9 @@
         mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
         x:Class="MammaMiaDev.Views.MainWindow"
         
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/logo.ico"
         Title="MammaMiaDev"
+        WindowStartupLocation="CenterScreen"
         
         xmlns:vm="using:MammaMiaDev.ViewModels"
         xmlns:template="using:MammaMiaDev.Templates"
