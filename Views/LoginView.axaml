@@ -1,0 +1,80 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="450"
+             x:Class="MammaMiaDev.Views.LoginView"
+             
+             
+             xmlns:vm="using:MammaMiaDev.ViewModels"
+             x:DataType="vm:LoginViewModel"
+             >
+
+  <Design.DataContext>
+    <vm:LoginViewModel/>
+  </Design.DataContext>
+
+  <DockPanel Margin="10">
+    <TextBlock DockPanel.Dock="Top"
+               Text="Login"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="0 10 0 20"
+               FontSize="26"
+               FontWeight="Medium"/>
+
+    <!-- BUTTON -->
+    <StackPanel DockPanel.Dock="Bottom">
+      <TextBlock Text="{Binding ErrorMessage}"
+                 HorizontalAlignment="Center"
+                 Foreground="IndianRed"
+                 FontSize="18"/>
+      <Button Content="LOGIN"
+              Command="{Binding LoginCommand}"
+              Background="#146059"
+              HorizontalAlignment="Stretch"
+              HorizontalContentAlignment="Center"
+              VerticalContentAlignment="Center"
+              Margin="0 10 0 0"
+              Height="50"
+              FontSize="18"/>
+    </StackPanel>
+    
+    <!-- CONTENT -->
+    <StackPanel Spacing="10">
+      <TextBox Text="{Binding UserName}"
+               Watermark="UserName"
+               Padding="10"
+               Margin="5"
+               Height="50"
+               VerticalContentAlignment="Center"
+               AcceptsReturn="False"
+               FontSize="16"
+               MaxLines="1"/>
+      <TextBox Text="{Binding Password}"
+               PasswordChar="*"
+               Watermark="Password"
+               Padding="10"
+               Margin="5"
+               Height="50"
+               VerticalContentAlignment="Center"
+               AcceptsReturn="False"
+               FontSize="16"
+               MaxLines="1"/>
+      <ComboBox ItemsSource="{Binding AvailableUsers}"
+                SelectedItem="{Binding SelectedUser}"
+                PlaceholderText="Select a user"
+                Margin="5"
+                Width="300"
+                Height="40"
+                HorizontalAlignment="Center"
+                VerticalContentAlignment="Center">
+        <ComboBox.ItemTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding FullName}"/>
+          </DataTemplate>
+        </ComboBox.ItemTemplate>
+      </ComboBox>
+    </StackPanel>
+  </DockPanel>
+</UserControl>
